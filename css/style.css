@@ -63,6 +63,9 @@ nav {
 .hero p, h1{
     margin: 0;
     padding: 1rem 0rem 0rem 0rem;
+    text-transform: uppercase;
+    color: white;
+
 }
 
 .hero p {
@@ -70,7 +73,5 @@ nav {
 }
 
 .hero h1 {
-    background-color: var(--color-highlight);
     font-family: 'Share Tech Mono';
-    color: white;
 }
