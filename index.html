@@ -24,6 +24,7 @@
                 <a href="#">Entre em contato</a>
                 <a href="https://www.linkedin.com/in/marco-borghetti/" class="fa-brands fa-linkedin nav-social" target="_blank"></a>
                 <a href="https://www.instagram.com/ma.borghetti/?igsh=MXVncXZzcDd5ejgxMQ==" class="fa-brands fa-instagram nav-social" target="_blank"></a>
+                <a href="https://github.com/marcobgh" class="fa-brands fa-square-github nav-social" target="_blank"></a>
             </div>
         </nav>
     </header>
@@ -32,12 +33,14 @@
         <div>
         </div>
         <div class="container hero-content">
-            <p class="hero-welcome">Olá! Eu sou o Marco Antonio Borghetti e sou </p>
+            <p class="hero-welcome">Olá! Sou o Marco e sou </p>
             <div class="hero-title">
                 <p id="role" class="role">Backend</p>
                 <p class="dev-label">Developer</p>
             </div>
-            <button onclick="mudarTexto()" class="btn">Vamos trabalhar juntos?</button>
+            <a href="/pages/contact.html" class="btn"> Vamos trabalhar juntos?
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
         </div>
     </section>
     
@@ -62,7 +65,7 @@
             setTimeout(typeEffect, 100); // velocidade de digitação
             } else {
             typing = false;
-            setTimeout(typeEffect, 1000); // pausa após digitar
+            setTimeout(typeEffect, 2000); // pausa após digitar
             }
         } else {
             if (charIndex > 0) {
@@ -72,7 +75,7 @@
             } else {
             typing = true;
             titleIndex = (titleIndex + 1) % titles.length;
-            setTimeout(typeEffect, 300); // pausa antes de começar nova palavra
+            setTimeout(typeEffect, 400); // pausa antes de começar nova palavra
             }
         }
         }

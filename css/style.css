@@ -20,6 +20,11 @@ body {
     line-height: 1.5;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
 /* nav-bar */
 
 header {
@@ -42,7 +47,7 @@ nav {
     color: var(--color-secondary);
     text-decoration: none;
     font-weight: 500;
-    padding-left: 2rem;
+    padding: 0rem 2rem 0rem 2rem;
     transition: transform .3s ease-out;
 }
 
@@ -50,14 +55,20 @@ nav {
     transform: scale(1.1);
 }
 
-.menu .nav-social:hover {
-    transform: scale(1.4);
+.menu .nav-social {
+    padding: 0.5rem;
 }
 
-.container .logo {
+.menu .nav-social:hover {
+    transform: scale(1.5);
+}
+
+header .logo {
     font-weight: 700;
     font-size: 1.5rem;
 }
+
+
 
 /* hero */
 
@@ -75,6 +86,10 @@ nav {
     text-transform: uppercase;
 }
 
+.hero-content {
+    width: 60vh;
+}
+
 .hero-welcome{
     margin: 0;
     font-size: 2rem;
@@ -85,6 +100,7 @@ nav {
     display: flex;
     flex-direction: row;
     white-space: nowrap;
+    margin-bottom: 1rem;
 }
 
 .hero-title p {
@@ -117,6 +133,7 @@ nav {
 /* button */
 
 .btn {
+    display: inline-block;
     background-color: var(--color-highlight);
     color: white;
     padding: 1rem 1.5rem;
@@ -126,6 +143,14 @@ nav {
     transition: transform .2s ease-out;
 }
 
-.btn:hover{
+.btn:hover {
     transform: scale(1.05);
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.btn i {
+    padding-left: 1rem;
 }
