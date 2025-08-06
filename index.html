@@ -22,22 +22,62 @@
                 <a href="/pages/skills.html">Habilidades</a>
                 <a href="#">Projetos</a>
                 <a href="#">Entre em contato</a>
-                <a href="https://www.linkedin.com/in/marco-borghetti/" class="fa-brands fa-linkedin" target="_blank"></a>
-                <a href="https://www.instagram.com/ma.borghetti/?igsh=MXVncXZzcDd5ejgxMQ==" class="fa-brands fa-instagram" target="_blank"></a>
+                <a href="https://www.linkedin.com/in/marco-borghetti/" class="fa-brands fa-linkedin nav-social" target="_blank"></a>
+                <a href="https://www.instagram.com/ma.borghetti/?igsh=MXVncXZzcDd5ejgxMQ==" class="fa-brands fa-instagram nav-social" target="_blank"></a>
             </div>
         </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero container grid grid--1x2">
+        <div>
+        </div>
         <div class="container hero-content">
-            <p>Olá! Eu sou o Marco Antonio Borghetti e sou </p>
-            <h1>Backend Developer</h1>
+            <p class="hero-welcome">Olá! Eu sou o Marco Antonio Borghetti e sou </p>
+            <div class="hero-title">
+                <p id="role" class="role">Backend</p>
+                <p class="dev-label">Developer</p>
+            </div>
+            <button onclick="mudarTexto()" class="btn">Vamos trabalhar juntos?</button>
         </div>
     </section>
+    
 
     <footer>
 
     </footer>
+    <script>
+        const roles = document.getElementById("role");
+        const titles = ["Back-end", "Front-end", "Full Stack", "Java", "Node.js", "Python", "PHP"];
+        let titleIndex = 0;
+        let charIndex = 0;
+        let typing = true;
 
+        function typeEffect() {
+        const currentTitle = titles[titleIndex];
+
+        if (typing) {
+            if (charIndex < currentTitle.length) {
+            roles.textContent += currentTitle.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeEffect, 100); // velocidade de digitação
+            } else {
+            typing = false;
+            setTimeout(typeEffect, 1000); // pausa após digitar
+            }
+        } else {
+            if (charIndex > 0) {
+            roles.textContent = currentTitle.substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(typeEffect, 50); // velocidade de apagar
+            } else {
+            typing = true;
+            titleIndex = (titleIndex + 1) % titles.length;
+            setTimeout(typeEffect, 300); // pausa antes de começar nova palavra
+            }
+        }
+        }
+
+document.addEventListener("DOMContentLoaded", typeEffect);
+    </script>
 </body>
 </html>

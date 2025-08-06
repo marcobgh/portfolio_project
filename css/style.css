@@ -23,26 +23,35 @@ body {
 /* nav-bar */
 
 header {
-    background-color: var(--color-secondary);
-    color: white;
+    background-color: white;
+    color: var(--color-secondary);
     padding: 1rem 2rem;
+    box-shadow: 0 0 10px 2px var(--color-highlight);
+    width: 100%;
+    position: fixed;
 }
 
 nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .menu a {
-    color: white;
+    display: inline-block;
+    color: var(--color-secondary);
     text-decoration: none;
     font-weight: 500;
-    padding-left: 1rem;
+    padding-left: 2rem;
+    transition: transform .3s ease-out;
 }
 
 .menu a:hover {
-    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+.menu .nav-social:hover {
+    transform: scale(1.4);
 }
 
 .container .logo {
@@ -53,25 +62,70 @@ nav {
 /* hero */
 
 .hero {
-    background-color: var(--color-primary);
     width: auto;
     height: 20rem;
     color: var(--color-highlight);
-    padding: 2rem 0rem;
-}
-
-.hero p, h1{
-    margin: 0;
-    padding: 1rem 0rem 0rem 0rem;
-    text-transform: uppercase;
-    color: white;
-
+    padding-top: 12.25rem;
+    text-align: left;
+    display: flex;
+    align-items: cenet;
 }
 
 .hero p {
+    text-transform: uppercase;
+}
+
+.hero-welcome{
+    margin: 0;
+    font-size: 2rem;
     font-weight: 500;
 }
 
-.hero h1 {
+.hero-title {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+}
+
+.hero-title p {
+    margin: 0;
     font-family: 'Share Tech Mono';
+    font-size: 6rem;
+    max-width: 700px;
+}
+
+.role {
+    padding-right: 3rem;
+}
+
+.hero-image {
+    width: 30rem;
+    border-radius: 70px;
+}
+
+
+/* Grid */
+
+.grid {
+    display: grid;
+}
+
+.grid--1x2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+/* button */
+
+.btn {
+    background-color: var(--color-highlight);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 3px 3px 10px 3px var(--color-secondary);
+    transition: transform .2s ease-out;
+}
+
+.btn:hover{
+    transform: scale(1.05);
 }
