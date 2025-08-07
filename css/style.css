@@ -25,6 +25,15 @@ a {
     text-decoration: none;
 }
 
+h1 {
+    font-weight: 600;
+}
+
+img {
+    width: 10rem;
+    height: 10rem;
+}
+
 /* nav-bar */
 
 header {
@@ -76,7 +85,8 @@ header .logo {
     width: auto;
     height: 20rem;
     color: var(--color-highlight);
-    padding-top: 12.25rem;
+    padding-top: 17.25rem;
+    margin-bottom: 9rem;
     text-align: left;
     display: flex;
     align-items: cenet;
@@ -154,3 +164,38 @@ header .logo {
 .btn i {
     padding-left: 1rem;
 }
+
+/* divisor */
+
+.divisor {
+    border-radius: 1px;
+    width: 100%;
+    height: 0.1rem;
+    background-color: #332B20;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+}
+
+/* Block */
+
+
+.body-content {
+    
+}
+
+.body-content .grid {
+    gap: 5rem 10rem;
+}
+
+.block-title {
+    text-transform: uppercase;
+}
+
+.block-content {
+    text-align: justify;
+}
+
+.body-content .grid {
+    padding-bottom: 5rem;
+}
+
