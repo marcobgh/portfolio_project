@@ -1,14 +1,6 @@
-function mudarTexto() {
-  const paragrafo = document.getElementById("role");
-  paragrafo.textContent = "Frontend";
-}
-
-const roles = document.getElementById("role");
-
-setTimeout(() => {
-  roles.textContent = "Frontend";
-}, 2000);
-
-setTimeout(() => {
-  roles.textContent = "Backend";
-}, 2000);
+const collapsibles = document.querySelectorAll(".collapsible");
+collapsibles.forEach((item) =>
+    item.addEventListener("click", function () {
+        this.classList.toggle("collapsible--expanded");
+    })
+);

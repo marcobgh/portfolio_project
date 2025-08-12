@@ -34,34 +34,72 @@ img {
     height: 10rem;
 }
 
-/* nav-bar */
+/* Lists */
 
-header {
-    background-color: white;
-    color: var(--color-secondary);
-    padding: 1rem 2rem;
-    box-shadow: 0 0 10px 2px var(--color-highlight);
-    width: 100%;
-    position: fixed;
+.list {
+    list-style: none;
+    padding-left: 0;
+
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.menu a {
+.list-inline {
     display: inline-block;
-    color: var(--color-secondary);
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0rem 2rem 0rem 2rem;
+}
+.list-item {
+    padding: 0.5rem 2rem;
+}
+
+.list-item a {
+    display: inline-block;
+    color: var(--color-highlight);
+    transition: transform .3s ease-out;
+
+}
+
+.list-item a:hover {
+    transform: scale(1.2);
+}
+
+.list-item a .nav-social {
     transition: transform .3s ease-out;
 }
 
-.menu a:hover {
-    transform: scale(1.1);
+.list-item a .nav-social:hover {
+    transform: scale(1.5);
+}
+
+
+
+
+/* nav-bar */
+
+header {
+    color: var(--color-secondary);
+    box-shadow: 0 0 10px 2px var(--color-highlight);
+
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.nav-list {
+    width: 100%;
+}
+
+.nav-toggler {
+    opacity: 0.5;
+    font-size: 3rem;
+    padding: 1rem;
+}
+
+.nav-toggler:hover {
+    cursor: pointer;
+}
+ 
+/* .menu a:hover {
 }
 
 .menu .nav-social {
@@ -77,7 +115,34 @@ header .logo {
     font-size: 1.5rem;
 }
 
+.nav-toggler:hover {
+    cursor: pointer;    
+} */
 
+/* @media screen and (min-width: 768px) {
+
+    .nav-toggler {
+        display: none;
+    }
+
+    header {
+        background-color: white;
+        padding: 1rem 2rem;
+        width: 100%;
+        position: fixed;
+
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu {
+        flex-direction: row;
+    }
+} */
 
 /* hero */
 
@@ -134,6 +199,7 @@ header .logo {
 
 .grid {
     display: grid;
+    gap: 5rem 10rem;
 }
 
 .grid--1x2 {
@@ -184,7 +250,7 @@ header .logo {
 }
 
 .body-content .grid {
-    gap: 5rem 10rem;
+    
 }
 
 .block-title {
@@ -199,3 +265,30 @@ header .logo {
     padding-bottom: 5rem;
 }
 
+/* project */
+
+.project-container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem 2rem;
+    
+}
+
+.project {
+    width: auto;
+    height: 15rem;
+    background-color: var(--color-highlight);
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+}
+
+.project-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.project-page-link {
+    color: var(--color-highlight);
+}
