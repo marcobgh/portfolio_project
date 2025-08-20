@@ -70,9 +70,9 @@ img {
 
 /* Collapsibles */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 775px) {
     
-    .collapsible-content {
+    header .collapsible-content {
         max-height: 0;
         overflow: hidden;
         opacity: 0;
@@ -101,13 +101,16 @@ header {
 }
 
 .nav-toggler {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
 }
 
 
 header .logo {
     font-weight: 700;
     font-size: 1.5rem;
+    padding: 1rem 0;
 }
 
 .nav-list {
@@ -121,7 +124,7 @@ header .logo {
     opacity: 1;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 775px) {
 
     .nav {
         flex-wrap: wrap;
@@ -136,6 +139,9 @@ header .logo {
         opacity: 0.5;
         font-size: 3rem;
         padding: 1rem;
+        max-height: 100vh;
+        overflow: auto;
+        align-self: center;
     }
 
     .nav-toggler:hover {
@@ -156,7 +162,7 @@ header .logo {
     width: auto;
     height: 20rem;
     color: var(--color-highlight);
-    padding-top: 17.25rem;
+    padding-top: 10rem;
     margin-bottom: 9rem;
     text-align: left;
     display: flex;
@@ -201,7 +207,7 @@ header .logo {
     border-radius: 70px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 775px) {
     .hero {
         padding-top: 7.25rem;
         margin-bottom: 4.5rem;
@@ -272,15 +278,6 @@ header .logo {
 
 /* Block */
 
-
-.body-content {
-    
-}
-
-.body-content .grid {
-    
-}
-
 .block-title {
     text-transform: uppercase;
 }
@@ -319,4 +316,46 @@ header .logo {
 
 .project-page-link {
     color: var(--color-highlight);
+    padding-bottom: 1rem;
+}
+
+
+
+/* input */
+
+.input-form {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.input-form h1 {
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-secondary);
+    margin-bottom: 2rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input, textarea {
+    border-radius: 10px;
+    border: 1px solid;
+    width: 40rem;
+    margin: 1rem 0;
+    margin-bottom: 2.5rem;
+    padding: 1rem 2rem;
+
+}
+
+input {
+    height: 4rem;
+
+}
+
+textarea {
+    height: 10rem;
 }
