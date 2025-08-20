@@ -1,0 +1,23 @@
+{
+  "name": "portfolio_project",
+  "version": "1.0.0",
+  "description": "",
+  "source": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcobgh/portfolio_project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcobgh/portfolio_project/issues"
+  },
+  "homepage": "https://github.com/marcobgh/portfolio_project#readme",
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  }
+}
